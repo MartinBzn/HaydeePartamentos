@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ContenedorPpal{
+    width: 98%;
+    margin: auto;    
+}
+
+/* -----------------------------Header----------------------------- */
+
+header{
+    width: 100%;
+    height: 113px;
+    background: antiquewhite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    
+}
+
+#LogoPrincipal{ 
+    width: 50px;
+    height: 60px;   
+    filter: drop-shadow(1px 1px 0 black);
+    float: left;
+}
+
+.TituloLogo{
+    height: 60px;
+    display: inline-flex;
+    align-items:flex-end;
+}
+
+.TituloLogo h1, h4{
+    color: rgb(245, 209, 6);
+    text-shadow: 1px 1px 2px black, 0 0 1px black, 0 0 1px black;
+    margin-left: 10px;
+    
+    font-family: 'Dancing Script', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.TituloLogo h1{
+    font-size: 32px;
+    height: 42px;
+}
+
+.TituloLogo h4{
+    margin-left: 5px;
+    font-size: 18px;
+    height: 30px;
+}
+
+
+
+header .ContenedorPpal{
+    display: table;
+}
+
+.Cabecera{
+    height: 80px;
+    border-bottom: 1px solid goldenrod;
+    align-items: center;
+}
+
+/* -----------------------------Header----------------------------- */
+
+/* -----------------------------Menu----------------------------- */
+
+#checkmenu{
+    display: none;
+}
+
+header label{
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 2px;
+    padding-top: 100px;
+    
+}
+
+.MenuPpal{
+    position: absolute;
+    width: 50%;
+    left: 0;
+    height: 210px;
+    background: rgba(250, 235, 215, 0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+
+}
+
+li{
+    border-top: 1px solid goldenrod;
+    
+}
+
+.li_menu a{
+    display: block;
+    color:black;
+    text-decoration: none;
+    padding: 10px 0;
+    padding-left: 7px;
+}
+
+.li_menu:hover{
+    background: rgba(218, 165, 32, 0.576);
+    font-weight: bold;
+    /* font-size: 20px; */
+}
+
+.li_menu a:hover{   
+    /* padding: 18px 0; */
+    /* padding-left: 7px; */
+    font-style: italic;   
+}
+
+#checkmenu:checked ~ .iconohamburguesa{
+    visibility: hidden;
+    display: none;
+}
+
+#checkmenu:not(:checked) ~ .iconocruz{
+    visibility: hidden;
+    display: none;
+}
+
+#checkmenu:checked ~ .MenuPpal{
+    transform: translateX(0);
+}
+
+/* -----------------------------Header----------------------------- */
+
+.Contenedores
+{
+    width: 98%;
+    margin-top: 113px;
+    position: relative;
+    flex-direction: column;    
+    margin-bottom: 100px;
+    height: auto;
+    justify-content: center;
+     
+}
+    
+.Contenedores img
+{
+    position: fixed;
+    z-index: -1;
+    width: 98%;
+    height: 100vh;
+    opacity: 50%;
+}
+    
+.Contenedores h2{
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    text-shadow: 2px 2px 2px gray;
+}
+
+/* -----------------------------Footer----------------------------- */
+
+footer{
+    font-size: 16px;
+    background-color: antiquewhite;
+    color: black;
+    padding: 15px 2px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+footer .ContenedorPpal{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.FooterDerecha {
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.FooterDerecha a{
+    text-decoration: none;
+
+    color: black;
+}
+
+.FooterIzquierda span{
+    justify-content: left;
+    /* font-size: 15px; */
+    font-style: italic;
+}
+
+/* -----------------------------Footer----------------------------- */
+
+/* -----------------------------Media Query----------------------------- */
+
+
+@media screen and (max-width: 480px)    /*----------320------------*/
+{ 
+    header{
+        height: 85px;
+    } 
+    
+    .Cabecera{
+        height: 50px;
+    }
+
+    .Contenedores
+    {
+    margin-top: 85px;
+    margin-bottom: 50px;
+     
+}
+    
+    #LogoPrincipal
+    {
+        width: 35px;
+        height: 30px;
+    }
+
+    .TituloLogo{
+        height: 40px;
+    }
+    .TituloLogo h1{
+        font-size: 20px;
+        height: 30px;
+    }
+    
+    .TituloLogo h4{
+        margin-left: 2px;
+        font-size: 12px;
+        height: 23px;
+    }
+
+    footer{
+        font-size: 12px;
+        font-style: normal;
+        height: 40px;
+        padding: 10px 2px;
+    }
+}                                       /*----------320------------*/
+
+@media screen and (min-width: 768px)    /*----------768------------*/
+{ 
+
+    .TituloLogo{
+        height: 70px;
+    }
+    .TituloLogo h1{
+        font-size: 40px;
+        height: 60px;
+    }
+    
+    .TituloLogo h4{
+        margin-left: 5px;
+        font-size: 25px;
+        height: 46px;
+    }
+}                                       /*----------768------------*/
+
+
+@media screen and (min-width: 1024px)   /*----------1024------------*/
+{
+    .Cabecera
+    {
+        display: block;
+        /* width: 100%;
+        margin: auto;
+        position: relative; */
+    }
+
+    .Contenedores
+    {
+            margin: 140px 10px 0 10px;
+            padding-bottom: 60px;
+    }
+
+    #LogoPrincipal
+    {
+        width: 70px;
+        height: 65px;
+    }
+
+    .TituloLogo{
+        height: 90px;
+        margin: auto;
+    }
+
+    .TituloLogo h1{
+        font-size: 60px;
+        height: 90px;
+    }
+    
+    .TituloLogo h4{
+        margin-left: 5px;
+        font-size: 30px;
+        height: 62px;
+    }
+    
+    header{
+        height: 140px;
+    }
+
+    .menu{
+        position:relative;
+        left: 0;
+        display: flex;
+        width: auto;
+        height: auto;
+        transform: none;
+        justify-content: center;
+    }
+
+    #checkmenu {
+        visibility: hidden;
+    }
+
+    .MenuPpal{
+        position: relative;
+        transition: none;
+        width: 75%;
+        height: 50px;
+        padding: 5px;        
+    }
+
+    #checkmenu:checked ~ .MenuPpal{
+        transform: translateX(0%);
+    }
+
+    #checkmenu:not(:checked) ~ .MenuPpal
+    {
+        transform: translateX(0%);
+    }
+
+    .iconocruz, .iconohamburguesa{
+        visibility: hidden;
+        display: none;
+    }
+
+    .ul_menu{
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .li_menu{
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        margin: 1px 10px;
+        list-style: none;
+        background-color: rgb(143, 104, 6);
+        box-shadow: 4px 4px 4px gray;
+        border-top-left-radius: 10%; 
+        border-top-right-radius: 10%; 
+        cursor: pointer;
+    }
+    
+    .li_menu:hover{
+        background-color: rgb(80, 59, 5);
+        font-weight: normal;
+        font-size: 16px;
+    }
+    
+    .li_menu a{
+        height: 40px;
+        padding: 10px;
+        text-decoration: none;
+        color: antiquewhite;
+    }
+
+    .li_menu a:hover{   
+        padding: 10px;
+        font-style: normal;
+        font-weight: bold;  
+    }
+}                                              /*----------1024------------*/     
+
+/* -----------------------------Media Query----------------------------- */

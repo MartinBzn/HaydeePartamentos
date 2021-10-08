@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haydee Partamentos - Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <script src="js/validarform.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/b1e1a24514.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+</head>
+
+<body>
+    <header id="headercabecera"><script src="js/header.js"></script></header>
+    
+    <main class="Contenedores" id="ContenedorContacto">
+        <img src="/img/BackGroundPpal.jpg" alt="">
+        <h2> - Contacto - </h2>
+        <h5>Complete el formulario para que nos pongamos en contacto a la brevedad.</h5><br>
+        <form action="show_data.html" target="_blank" onsubmit=" return validarCampos()">
+            <!-- <div class="ContenedorFormulario"></div> -->
+                <label for="Nombre" id="labelNom" >Nombre (*):</label>
+                <input size="40" type="text" name="Nombre" placeholder="Ej: Martín Alejandro Bazán" id="inpNom" class="cajatexto" >
+                <label for="Telefono">Teléfono (sin 0 ni 15):</label>
+                <input size="20" type="number" name="Telefono" placeholder="Ej: 1155555555"class="cajatexto" id="tel">
+                <label for="Mail">Correo Electrónico (*):</label>
+                <input size="50" type="mail" name="Mail" placeholder="martinbazan@haydeepartamentos.com.ar" class="cajatexto" id="mail" >
+                <label for="FecNac">Fecha de Nacimiento:</label>
+                <input type="date" name="FecNac" class="cajatexto">
+                <label for="barrio">Barrio</label>
+                <select name="listabarrios" id="listabarrios" class="cajatexto"> 
+                    <option value="0">Elija una opcion</option>
+                    <option value="1">Agronomía</option>
+                    <option value="2">Almagro</option>
+                    <option value="3">Balvanera</option>
+                    <option value="4">Barracas</option>
+                    <option value="5">Belgrano</option>
+                    <option value="6">Boedo</option>
+                    <option value="7">Caballito</option>
+                    <option value="8">Chacarita</option>
+                    <option value="9">Coghlan</option>
+                    <option value="10">Colegiales</option>
+                    <option value="11">Constitución</option>
+                    <option value="12">Flores</option>
+                    <option value="13">Floresta</option>
+                    <option value="14">La Boca</option>
+                    <option value="15">La Paternal</option>
+                    <option value="16">Liniers</option>
+                    <option value="17">Mataderos</option>
+                    <option value="18">Montserrat</option>
+                    <option value="19">Monte Castro</option>
+                    <option value="20">Nueva Pompeya</option>
+                    <option value="21">Núñez</option>
+                    <option value="22">Palermo</option>
+                    <option value="23">Parque Avellaneda</option>
+                    <option value="24">Parque Chacabuco</option>
+                    <option value="25">Parque Chas</option>
+                    <option value="26">Parque Patricios</option>
+                    <option value="27">Puerto Madero</option>
+                    <option value="28">Recoleta</option>
+                    <option value="29">Retiro</option>
+                    <option value="30">Saavedra</option>
+                    <option value="31">San Cristóbal</option>
+                    <option value="32">San Nicolás</option>
+                    <option value="33">San Telmo</option>
+                    <option value="34">Vélez Sarsfield</option>
+                    <option value="35">Versalles</option>
+                    <option value="36">Villa Crespo</option>
+                    <option value="37">Villa del Parque</option>
+                    <option value="38">Villa Devoto</option>
+                    <option value="39">Villa Gral. Mitre</option>
+                    <option value="40">Villa Lugano</option>
+                    <option value="41">Villa Luro</option>
+                    <option value="42">Villa Ortúzar</option>
+                    <option value="43">Villa Pueyrredón</option>
+                    <option value="44">Villa Real</option>
+                    <option value="45">Villa Riachuelo</option>
+                    <option value="46">Villa Santa Rita</option>
+                    <option value="47">Villa Soldati</option>
+                    <option value="48">Villa Urquiza</option>
+                </select>
+                <label for="Consulta">Escriba aqui su consulta (*)</label>
+                <textarea name="Consulta" rows="10" cols="50" placeholder="Comentario" class="cajatexto" id="cons"></textarea>
+                <!-- <input type="submit" value="Enviar" id="botonenviar"> -->
+                <input type="submit" value="Enviar" id="botonenviar">
+                <h6><i>(*) obligatorio</i></h6>
+            <!-- </div> -->
+        </form> 
+        <section class="Canales"> 
+            <h5>O bien, puede comunicarse con nosotros de las siguientes maneras:</h5>
+            <p><i class="fab fa-whatsapp"></i>  1155555555</p>
+            <p><i class="fas fa-phone-alt"></i>  (011) 5555-5555</p>
+            <p><i class="far fa-envelope"></i>  atencion@haydeepartamentos.com.ar</p>
+            <p><i class="fab fa-facebook"></i>  HaydeePartamentosInmb</p>
+            <p><i class="fab fa-twitter"></i>  @HaydeePartamentosInmb</p>
+            <p><i class="fab fa-instagram"></i></i>  @HaydeePartamentosInmb</p>
+            <p><i class="fab fa-linkedin-in"></i></i>  HaydeePartamentosInmb</p>
+        </section> 
+                
+    </main>
+
+    <footer id="finpagina"><script src="js/footer.js"></script></footer>
+    <script src="js/validarform.js"></script>
+</body>
+</html>

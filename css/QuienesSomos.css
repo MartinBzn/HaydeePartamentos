@@ -1,0 +1,69 @@
+#ImagenFrente img{
+    width: 75%;
+    height: auto;
+    opacity: 100%;
+    position: relative;
+    margin: 20px 12.5%;
+    border: 6px double black;
+
+}
+
+#Historia, #Ubicacion{
+    position: relative;
+    text-align: justify;
+}
+
+#Ubicacion{
+    text-align: center}
+
+#Historia p, #Ubicacion p{
+    position: relative;
+    margin: 20px;
+}
+
+#Ubicacion p iframe{
+    width: 300px;
+    height: 225px;
+} 
+
+@media screen and (min-width:320px){
+    #Ubicacion p iframe{
+        width: 240px;
+        height: 180px;
+    } 
+    #Ubicacion{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+   .Sucursales{
+       display: inline-block;
+       
+   }
+}
+
+@media screen and (min-width:480px){
+    #Ubicacion{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+   .Sucursales{
+       display: inline-block;
+       
+   }
+}
+
+@media screen and (min-width:768px){
+    #Ubicacion p iframe{
+        width: 360px;
+        height: 270px;
+    } 
+}
+
+@media screen and (min-width:1024px){
+    #Ubicacion p iframe{
+        width: 500px;
+        height: 375px;
+    }
+}
