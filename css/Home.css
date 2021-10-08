@@ -1,0 +1,106 @@
+*
+{
+    box-sizing: border-box;    
+}
+
+@keyframes aparecer{
+    10% {opacity: 0};
+    50% {opacity: 25%};
+    75% {opacity: 50%};
+    100% {opacity: 100%;}
+}
+
+
+
+.tarjeta{
+    display: grid;
+    grid-template-areas: "foto" "caracteristicas";
+    grid-template-rows: 70% auto;
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.453);
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.imagentarjeta{
+    grid-area: foto;
+    /* object-fit: fill; */
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.imagentarjeta img{
+    opacity: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 0;
+    position:static;
+}
+
+.caracteristicas{
+    grid-area: caracteristicas;
+    display: grid;
+    grid-template-areas: "direccion" "operacion" "importe" "ambientes";
+    align-content: space-evenly;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.operacion{
+    grid-area: operacion;
+}
+
+.direccion{
+    grid-area: direccion;
+    font-weight: bold;
+}
+
+.importe{
+    grid-area: importe;
+}
+
+.ambientes{
+    grid-area: ambientes;
+}
+
+.articulo{    
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.453);
+    border-radius: 8px;
+}
+
+.articulo div img{
+    opacity: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: 0;
+    position:static;
+}
+
+.articulo p, .articulo div,.articulo h5{
+    padding: 5px;
+}
+.articulo p{
+    font-size: 12px;
+}
+
+

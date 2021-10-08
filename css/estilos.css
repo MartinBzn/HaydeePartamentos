@@ -156,12 +156,38 @@ li{
     height: 100vh;
     opacity: 50%;
 }
+
+@keyframes mover{
+    0%{
+        transform: translateX(-100%);
+        font-style: oblique;       
+    }
+
+    80%{
+        transform: translateX(10%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes cambiarColor{
+    from{
+        color: goldenrod;
+    }
+}
     
 .Contenedores h2{
     position: relative;
     text-align: center;
     padding: 10px 0;
     text-shadow: 2px 2px 2px gray;
+    /* animation-name: mover;
+    animation-duration: 2s; */
+    animation: 
+        mover 1s linear 0s,
+        cambiarColor 2s linear 2s;
 }
 
 /* -----------------------------Footer----------------------------- */
@@ -238,7 +264,7 @@ footer .ContenedorPpal{
     
     .TituloLogo h4{
         margin-left: 2px;
-        font-size: 12px;
+        font-size: 11px;
         height: 23px;
     }
 
@@ -385,6 +411,12 @@ footer .ContenedorPpal{
         padding: 10px;
         font-style: normal;
         font-weight: bold;  
+    }
+
+    h2{
+        animation: 
+            mover 5s linear 0s,
+            cambiarColor 2s linear 5s;
     }
 }                                              /*----------1024------------*/     
 
