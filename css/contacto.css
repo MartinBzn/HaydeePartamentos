@@ -6,11 +6,11 @@
 form
 {
     display: grid;
+    width: 95%;
     grid-template-columns: 100%;
-    /* grid-template-rows: repeat(50px,10); */
     background-color: rgba(218, 165, 32, 0.446);
     padding: 10px;
-    margin: 0 10px 20px 10px;
+    margin: 0 auto 20px;
     border-radius: 5px;
     border-color: goldenrod;
 }
@@ -35,13 +35,14 @@ main p{
 .cajatexto
 {
     background-color: rgba(255, 255, 255, 0.5);
-    margin: 5px;
+    /* margin: 5px; */
     padding: 5px;
     font-size: 16px;
     font-style: italic;
     border-radius: 5px;
     border-style:ridge;
     border-color: goldenrod;
+    width: 98%;
 }
 
 h5{
@@ -65,12 +66,102 @@ h5{
 @media screen and (min-width: 768px)    /*----------768------------*/
 {
     form{
-        grid-template-columns: [ini] 20% [med] auto [fin];
+        grid-template-columns: [ini] 30% [med] auto [fin];
         /* grid-template-rows: repeat(4, 50px); */
     }
 
     #botonenviar{
         grid-column-start: ini;
         grid-column-end: fin;
+    }
+
+    .Canales, form{
+        max-width: 600px;
+        margin: 0 auto 20px;
+    }
+
+    main h5{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}                                    /*----------768------------*/
+
+@media screen and (min-width: 1024px){
+    form{
+        max-width: 80%;
+        grid-template-areas: "labelnom labeltel" "inpnom inptel" "labelmail labelfec" "inpmail inpfec" "labelbarrio labelvacio" "inpbarrio inpvacio" "labelcons labelcons" "inpcons inpcons" "btnenviar btnenviar" "leyenda leyenda";
+        grid-template-columns: 50% auto;
+    }
+
+    #labelNom{
+        grid-area: labelnom;
+    }
+
+    #inpNom{
+        grid-area: inpnom;
+    }
+
+    #labelTel{
+        grid-area: labeltel;
+    }
+
+    #tel{
+        grid-area: inptel;
+    }
+
+    #labelMail{
+        grid-area: labelmail;
+    }
+
+    #mail{
+        grid-area: inpmail;
+    }
+
+    #labelFec{
+        grid-area: labelfec;
+    }
+
+    #inpFec{
+        grid-area: inpfec;
+    }
+
+    #labelBarrio{
+        grid-area: labelbarrio;
+    }
+
+    #listabarrios{
+        grid-area: inpbarrio;
+    }
+
+    #labelCons{
+        grid-area: labelcons;
+    }
+
+    #cons{
+        grid-area: inpcons;
+    }
+
+    #botonenviar{
+        grid-area: btnenviar;
+    }
+    
+    form h6{
+        grid-area: leyenda;
+    }
+
+    .Canales, form{
+        max-width: 80%;
+    }
+
+    main h5{
+        max-width: 80%;
+        margin-left: auto;
+    }
+
+    .Canales h5{
+        padding-left: 10px;
+        max-width:max-content;
+        margin-left: 0;
     }
 }

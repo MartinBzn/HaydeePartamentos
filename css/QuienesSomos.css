@@ -62,8 +62,33 @@
 }
 
 @media screen and (min-width:1024px){
+
+    .Contenedores{
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #Ubicacion p iframe{
         width: 500px;
         height: 375px;
+    }
+
+    #ImagenFrente{
+        display: flex;
+        justify-content: center;
+    }
+
+    #ImagenFrente img{
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 0;
+
+    }
+
+    #Historia{
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }

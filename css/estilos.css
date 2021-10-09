@@ -138,7 +138,7 @@ li{
 
 .Contenedores
 {
-    width: 98%;
+    width: 100%;
     margin-top: 113px;
     position: relative;
     flex-direction: column;    
@@ -152,7 +152,7 @@ li{
 {
     position: fixed;
     z-index: -1;
-    width: 98%;
+    width: 100%;
     height: 100vh;
     opacity: 50%;
 }
@@ -307,7 +307,7 @@ footer .ContenedorPpal{
 
     .Contenedores
     {
-            margin: 140px 10px 0 10px;
+            margin: 140px 0 0 0;
             padding-bottom: 60px;
     }
 

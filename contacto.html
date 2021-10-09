@@ -27,13 +27,13 @@
             <!-- <div class="ContenedorFormulario"></div> -->
                 <label for="Nombre" id="labelNom" >Nombre (*):</label>
                 <input size="40" type="text" name="Nombre" placeholder="Ej: Martín Alejandro Bazán" id="inpNom" class="cajatexto" >
-                <label for="Telefono">Teléfono (sin 0 ni 15):</label>
+                <label for="Telefono" id="labelTel">Teléfono (sin 0 ni 15):</label>
                 <input size="20" type="number" name="Telefono" placeholder="Ej: 1155555555"class="cajatexto" id="tel">
-                <label for="Mail">Correo Electrónico (*):</label>
+                <label for="Mail" id="labelMail">Correo Electrónico (*):</label>
                 <input size="50" type="mail" name="Mail" placeholder="martinbazan@haydeepartamentos.com.ar" class="cajatexto" id="mail" >
-                <label for="FecNac">Fecha de Nacimiento:</label>
-                <input type="date" name="FecNac" class="cajatexto">
-                <label for="barrio">Barrio</label>
+                <label for="FecNac" id="labelFec">Fecha de Nacimiento:</label>
+                <input type="date" name="FecNac" class="cajatexto" id="inpFec">
+                <label for="barrio" id="labelBarrio">Barrio</label>
                 <select name="listabarrios" id="listabarrios" class="cajatexto"> 
                     <option value="0">Elija una opcion</option>
                     <option value="1">Agronomía</option>
@@ -85,7 +85,7 @@
                     <option value="47">Villa Soldati</option>
                     <option value="48">Villa Urquiza</option>
                 </select>
-                <label for="Consulta">Escriba aqui su consulta (*)</label>
+                <label for="Consulta" id="labelCons">Escriba aqui su consulta (*)</label>
                 <textarea name="Consulta" rows="10" cols="50" placeholder="Comentario" class="cajatexto" id="cons"></textarea>
                 <!-- <input type="submit" value="Enviar" id="botonenviar"> -->
                 <input type="submit" value="Enviar" id="botonenviar">

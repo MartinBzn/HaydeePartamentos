@@ -10,6 +10,20 @@
     100% {opacity: 100%;}
 }
 
+#destacadas{
+    /* margin-top: px; */
+    display: grid;
+    grid-template-areas: "titulo" "tarjeta1" "tarjeta2";
+}
+
+
+#tarjeta1{
+    grid-area: tarjeta1;
+}
+
+#tarjeta2{
+    grid-area: tarjeta2;
+}
 
 
 .tarjeta{
@@ -17,6 +31,7 @@
     grid-template-areas: "foto" "caracteristicas";
     grid-template-rows: 70% auto;
     width: 90%;
+    max-width: 500px;
     height: 300px;
     margin: auto;
     margin-bottom: 20px;
@@ -78,8 +93,15 @@ h3{
     grid-area: ambientes;
 }
 
+#interes{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .articulo{    
     width: 90%;
+    max-width: 500px;
     margin: auto;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.453);
@@ -103,4 +125,31 @@ h3{
     font-size: 12px;
 }
 
+@media screen and (min-width: 1024px) {
+    #destacadas{
+        grid-template-areas: "titulo titulo" "tarjeta1 tarjeta2";
+        margin-left:auto;
+        margin-right:auto;
+        grid-template-columns: 50% auto;
 
+    }
+
+
+    .tarjeta{
+        max-width: 85%;
+    }
+
+    #tarjeta1{
+        grid-area: tarjeta1;
+    }
+
+    #tarjeta2{
+        grid-area: tarjeta2;
+    }
+
+    section h3{
+        grid-area: titulo;
+        margin-bottom: 20px;
+    }
+        
+}
