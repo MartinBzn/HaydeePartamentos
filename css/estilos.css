@@ -157,21 +157,6 @@ li{
     opacity: 50%;
 }
 
-@keyframes mover{
-    0%{
-        transform: translateX(-100%);
-        font-style: oblique;       
-    }
-
-    80%{
-        transform: translateX(10%);
-    }
-
-    100%{
-        transform: translateX(0%);
-    }
-}
-
 @keyframes cambiarColor{
     from{
         color: goldenrod;
@@ -185,9 +170,7 @@ li{
     text-shadow: 2px 2px 2px gray;
     /* animation-name: mover;
     animation-duration: 2s; */
-    animation: 
-        mover 1s linear 0s,
-        cambiarColor 2s linear 2s;
+    animation: cambiarColor 2s linear;
 }
 
 /* -----------------------------Footer----------------------------- */
@@ -414,9 +397,7 @@ footer .ContenedorPpal{
     }
 
     h2{
-        animation: 
-            mover 5s linear 0s,
-            cambiarColor 2s linear 5s;
+        animation: cambiarColor 2s linear;
     }
 }                                              /*----------1024------------*/     
 
