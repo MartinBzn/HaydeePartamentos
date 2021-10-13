@@ -25,14 +25,13 @@
     grid-area: tarjeta2;
 }
 
-
 .tarjeta{
     display: grid;
     grid-template-areas: "foto" "caracteristicas";
     grid-template-rows: 70% auto;
     width: 90%;
     max-width: 500px;
-    height: 300px;
+    height: 350px;
     margin: auto;
     margin-bottom: 20px;
     border: 2px solid goldenrod;
@@ -70,7 +69,7 @@ h3{
 .caracteristicas{
     grid-area: caracteristicas;
     display: grid;
-    grid-template-areas: "direccion" "operacion" "importe" "ambientes";
+    grid-template-areas: "direccion" "operacion" "importe" "ambientes" "ver";
     align-content: space-evenly;
     font-size: 12px;
     margin: 0 5px;
@@ -93,10 +92,14 @@ h3{
     grid-area: ambientes;
 }
 
+.ver{
+    grid-area: ver;
+    cursor: pointer;
+}
+
 #interes{
     display: grid;
     grid-template-areas: "titulo" "articulo1" "articulo2" "articulo3";
-    grid-template-rows: 10% repeat(3,30%);
     margin-left: auto;
     margin-right: auto;
 }
