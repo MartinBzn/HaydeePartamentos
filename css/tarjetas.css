@@ -1,0 +1,105 @@
+#Inmuebles{
+    display: grid;
+    grid-template-areas: "tarjeta1" "tarjeta2" "tarjeta3";
+    margin-bottom: 20px;
+}
+
+#tarjeta1{
+    grid-area: tarjeta1;
+}
+
+#tarjeta2{
+    grid-area: tarjeta2;
+}
+
+.tarjeta{
+    display: grid;
+    grid-template-areas: "foto" "caracteristicas";
+    grid-template-rows: 70% auto;
+    width: 90%;
+    max-width: 500px;
+    height: 350px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.453);
+    animation-duration: 5s;
+    animation-name: aparecer;
+}
+
+.imagentarjeta{
+    grid-area: foto;
+    /* object-fit: fill; */
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.imagentarjeta img{
+    opacity: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 0;
+    position:static;
+}
+
+.caracteristicas{
+    grid-area: caracteristicas;
+    display: grid;
+    grid-template-areas: "direccion" "operacion" "importe" "ambientes" "ver";
+    align-content: space-evenly;
+    font-size: 12px;
+    margin: 0 5px;
+}
+
+.id_inmueble{
+    display: none;
+}
+
+.operacion{
+    grid-area: operacion;
+}
+
+.direccion{
+    grid-area: direccion;
+    font-weight: bold;
+}
+
+.importe{
+    grid-area: importe;
+}
+
+.ambientes{
+    grid-area: ambientes;
+}
+
+.ver{
+    grid-area: ver;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+    .tarjeta{
+        max-width: 95%;
+    }
+
+    #Inmuebles{
+        grid-template-areas: "tarjeta1 tarjeta2 tarjeta3";
+        margin-left:auto;
+        margin-right:auto;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+}
+
+@keyframes aparecer{
+    10% {opacity: 0};
+    50% {opacity: 25%};
+    75% {opacity: 50%};
+    100% {opacity: 100%;}
+}

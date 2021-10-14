@@ -16,6 +16,10 @@
     margin-bottom: 20px;
 }
 
+h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
 
 #tarjeta1{
     grid-area: tarjeta1;
@@ -23,78 +27,6 @@
 
 #tarjeta2{
     grid-area: tarjeta2;
-}
-
-.tarjeta{
-    display: grid;
-    grid-template-areas: "foto" "caracteristicas";
-    grid-template-rows: 70% auto;
-    width: 90%;
-    max-width: 500px;
-    height: 350px;
-    margin: auto;
-    margin-bottom: 20px;
-    border: 2px solid goldenrod;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.453);
-    animation-duration: 5s;
-    animation-name: aparecer;
-}
-
-h3{
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.imagentarjeta{
-    grid-area: foto;
-    /* object-fit: fill; */
-    width: 100%;
-    height: 100%;
-    background: black;
-}
-
-.imagentarjeta img{
-    opacity: 100%;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    z-index: 0;
-    position:static;
-}
-
-.caracteristicas{
-    grid-area: caracteristicas;
-    display: grid;
-    grid-template-areas: "direccion" "operacion" "importe" "ambientes" "ver";
-    align-content: space-evenly;
-    font-size: 12px;
-    margin: 0 5px;
-}
-
-.operacion{
-    grid-area: operacion;
-}
-
-.direccion{
-    grid-area: direccion;
-    font-weight: bold;
-}
-
-.importe{
-    grid-area: importe;
-}
-
-.ambientes{
-    grid-area: ambientes;
-}
-
-.ver{
-    grid-area: ver;
-    cursor: pointer;
 }
 
 #interes{
@@ -152,11 +84,6 @@ h3{
         margin-right:auto;
         grid-template-columns: 50% auto;
 
-    }
-
-
-    .tarjeta{
-        max-width: 85%;
     }
 
     #tarjeta1{

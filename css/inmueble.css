@@ -5,7 +5,7 @@
 
 .vistainmueble{
     display: grid;
-    grid-template-areas: "direccion" "descripcion" "slider" ;
+    grid-template-areas: "direccion" "descripcion" "slider" "mapa";
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -22,6 +22,7 @@
 .vistainmueble p{
     grid-area: descripcion;
     margin-bottom: 10px;
+	text-align: justify;
 }
 
 .contenedorSlider{
@@ -37,6 +38,15 @@
 	/* user-select: none; */
 }
 
+.mapaInmueble{
+	grid-area: mapa;
+}
+
+.mapaInmueble iframe{
+	width: 100%;
+	height: calc((600*100vw/800));
+}
+
 /* .slide_img, .selector2{
 	
 	height: 300px;
@@ -49,13 +59,13 @@
 	height:fit-content;
 }
 
-.contenedorSlider .slide_img{
+.contenedorSlider #pantalla .slide_img{
 	position: absolute;
 	width: 100%;
 	height: calc((600*(100vw*0.9)/800));
 }
 
-.contenedorSlider .slide_img img{
+.contenedorSlider #pantalla .slide_img img{
 	width: 100%;
 	height: 100%;
     opacity: 1;
@@ -135,19 +145,6 @@ label span{
 	object-fit:fill;
 }
 
-/* #nav_slide .selector2{
-	top: -5px;
-	width: 12px;
-	height: 12px;
-	margin: 0 4px;
-	position: relative;
-	border-radius: 100%;
-	display: inline-block;
-	background-color: rgba(0, 0, 0, 0.6);
-    border: solid 1px #ffffff;
-	transition: .4s;
-} */
-
 #nav_slide .selector2:hover {
 	cursor: pointer;
 	/* background-color: gold; */
@@ -179,3 +176,47 @@ label span{
 	background-color: goldenrod;
 } */
 
+@media  screen and (min-width: 768px) {
+	label span{
+		font-size: 24px;
+	}	
+}
+
+@media  screen and (min-width: 1024px) {
+	label span{
+		font-size: 36px;
+	}	
+
+	.vistainmueble{
+		grid-template-areas: "direccion slider" "descripcion slider" "mapa slider";
+		grid-template-columns: 40% 60%;
+		grid-template-rows: 25px 75px 390px;
+		gap: 15px;
+		width: 1010px;
+		height: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+	
+	.contenedorSlider{
+		grid-template-rows: 420px 80px;
+	}
+
+	.contenedorSlider #pantalla .slider_img{
+		height: 420px;
+	}
+
+	.contenedorSlider #pantalla .slide_img img{
+		height: 420px;
+	}
+
+	label span{
+		font-size: 24px;
+		top: 210px;
+	}
+
+	.mapaInmueble iframe{
+		height: 390px;
+	}
+}

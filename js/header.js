@@ -13,13 +13,21 @@ document.getElementById ("headercabecera").innerHTML= `
                 <label class="iconocruz" for="checkmenu"><i class="fas fa-times"></i></label>
                 <nav class="MenuPpal">   
                     <ul class="ul_menu">
-                        <li class="li_menu"><a href="index.html">Home</a></li>
-                        <li class="li_menu"><a href="ventas.html">Venta</a></li>
-                        <li class="li_menu"><a href="alquileres.html">Alquiler</a></li>
-                        <li class="li_menu"><a href="quienessomos.html">Quienes Somos</a></li>
-                        <li class="li_menu"><a href="contacto.html">Contacto</a></li>
+                        <li class="li_menu" id="home"><a href="index.html">Home</a></li>
+                        <li class="li_menu" id="venta" onClick="elegirOperacion(1)")><a href="Operacion.html">Venta</a></li>
+                        <li class="li_menu" id="alquiler" onClick="elegirOperacion(2)")><a href="Operacion.html">Alquiler</a></li>
+                        <li class="li_menu" id="quienessomos"><a href="quienessomos.html">Quienes Somos</a></li>
+                        <li class="li_menu" id="contacto"><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </nav>    
             </div>
         </div>
 `
+
+function elegirOperacion (opcion){
+    if(opcion == 1){
+        sessionStorage.opcion ="1";
+    }else{
+        sessionStorage.opcion = "2"
+    }
+}
