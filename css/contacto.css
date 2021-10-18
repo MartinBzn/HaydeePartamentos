@@ -23,15 +23,6 @@ label{
 main p{
     padding: 10px;
 }
-
-/* #labelNom{
-    grid-area: labelnombre;
-}
-
-#inpNom{
-    grid-area: inputnombre;
-} */
-
 .cajatexto
 {
     background-color: rgba(255, 255, 255, 0.5);
@@ -66,7 +57,6 @@ h5{
 {
     form{
         grid-template-columns: [ini] 30% [med] auto [fin];
-        /* grid-template-rows: repeat(4, 50px); */
     }
 
     #botonenviar{

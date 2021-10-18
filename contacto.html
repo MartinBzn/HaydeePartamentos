@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#daa520">
     <title>Haydee Partamentos - Contacto</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/contacto.css">
@@ -23,8 +24,7 @@
         <img src="/img/BackGroundPpal.jpg" alt="">
         <h2> - Contacto - </h2>
         <h5>Complete el formulario para que nos pongamos en contacto a la brevedad.</h5><br>
-        <form action="show_data.html" target="_blank" onsubmit=" return validarCampos()">
-            <!-- <div class="ContenedorFormulario"></div> -->
+        <form name= "formulario" onsubmit=" return validarCampos()">
                 <label for="Nombre" id="labelNom" >Nombre (*):</label>
                 <input size="40" type="text" name="Nombre" placeholder="Ej: Martín Alejandro Bazán" id="inpNom" class="cajatexto" >
                 <label for="Telefono" id="labelTel">Teléfono (sin 0 ni 15):</label>
@@ -87,10 +87,8 @@
                 </select>
                 <label for="Consulta" id="labelCons">Escriba aqui su consulta (*)</label>
                 <textarea name="Consulta" rows="10" cols="50" placeholder="Comentario" class="cajatexto" id="cons"></textarea>
-                <!-- <input type="submit" value="Enviar" id="botonenviar"> -->
                 <input type="submit" value="Enviar" id="botonenviar">
                 <h6><i>(*) obligatorio</i></h6>
-            <!-- </div> -->
         </form> 
         <section class="Canales"> 
             <h5>O bien, puede comunicarse con nosotros de las siguientes maneras:</h5>

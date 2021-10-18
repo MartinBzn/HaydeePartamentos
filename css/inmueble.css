@@ -5,7 +5,7 @@
 
 .vistainmueble{
     display: grid;
-    grid-template-areas: "direccion" "descripcion" "slider" "mapa";
+    grid-template-areas: "direccion" "descripcion" "slider" "volver";
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -19,10 +19,14 @@
     margin-bottom: 10px;
 }
 
-.vistainmueble p{
+.vistainmueble .descripcion{
     grid-area: descripcion;
     margin-bottom: 10px;
 	text-align: justify;
+}
+
+.vistainmueble .volver{
+	font-size: 15px;
 }
 
 .contenedorSlider{
@@ -33,24 +37,8 @@
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
-	/* height: 500px; */
 	padding-bottom: 20px;
-	/* user-select: none; */
 }
-
-.mapaInmueble{
-	grid-area: mapa;
-}
-
-.mapaInmueble iframe{
-	width: 100%;
-	height: calc((600*100vw/800));
-}
-
-/* .slide_img, .selector2{
-	
-	height: 300px;
-} */
 
 .contenedorSlider #pantalla{
 	grid-area: pantalla;
@@ -126,11 +114,8 @@ label span{
 #nav_slide .selector2{
 	width: calc(100%/6);
 	height: 100%;
-	/* margin: 0 4px; */
 	position: relative;
-	/* border-radius: 100%; */
 	display: inline-block;
-	/* background-color: rgba(0, 0, 0, 0.6); */
     border: solid 1px #ffffff;
 	transition: .4s;
 }
@@ -147,8 +132,6 @@ label span{
 
 #nav_slide .selector2:hover {
 	cursor: pointer;
-	/* background-color: gold; */
-    /* border: solid 1px #ffffff; */
 	transition: .25s
 }
 
@@ -166,16 +149,6 @@ label span{
 	z-index: 9; 
 }
 
-/* #irImagen1:checked  ~  #nav_slide #dot1,
-#irImagen2:checked  ~  #nav_slide #dot2,
-#irImagen3:checked  ~  #nav_slide #dot3,
-#irImagen4:checked  ~  #nav_slide #dot4,
-#irImagen5:checked  ~  #nav_slide #dot5,
-#irImagen6:checked  ~  #nav_slide #dot6
-{ 
-	background-color: goldenrod;
-} */
-
 @media  screen and (min-width: 768px) {
 	label span{
 		font-size: 24px;
@@ -188,9 +161,9 @@ label span{
 	}	
 
 	.vistainmueble{
-		grid-template-areas: "direccion slider" "descripcion slider" "mapa slider";
-		grid-template-columns: 40% 60%;
-		grid-template-rows: 25px 75px 390px;
+		grid-template-areas: "slider direccion" "slider descripcion" "slider volver";
+		grid-template-columns: 60% 38.5%;
+		grid-template-rows: 70px 360px auto;
 		gap: 15px;
 		width: 1010px;
 		height: 500px;
@@ -216,7 +189,19 @@ label span{
 		top: 210px;
 	}
 
-	.mapaInmueble iframe{
-		height: 390px;
+	.vistainmueble h3{
+		font-size: 24px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.vistainmueble .descripcion{
+		font-size: 20px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.vistainmueble .volver{
+		font-size: 24px;
 	}
 }

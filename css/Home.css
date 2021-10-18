@@ -55,6 +55,7 @@ h3{
 .articulo{    
     width: 90%;
     max-width: 500px;
+    height: 500px;
     margin: auto;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.453);
@@ -107,21 +108,4 @@ h3{
     .articulo{
         margin-top: 0;
     }
-    
-    #interes h3{
-        grid-area: titulo;
-    }
-    
-    #articulo1{
-        grid-area: articulo1;
-    }
-    
-    #articulo2{
-        grid-area: articulo2;
-    }
-    
-    #articulo3{
-        grid-area: articulo3;
-    }
-        
 }

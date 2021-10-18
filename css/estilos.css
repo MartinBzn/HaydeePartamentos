@@ -7,14 +7,19 @@
 
 .ContenedorPpal{
     width: 98%;
-    margin: auto;    
+    margin: auto;
+    height: 100%;    
+}
+
+body{
+    display: flex;
 }
 
 /* -----------------------------Header----------------------------- */
 
 header{
     width: 100%;
-    height: 113px;
+    height: 102px;
     background: antiquewhite;
     position: fixed;
     top: 0;
@@ -25,14 +30,12 @@ header{
 
 #LogoPrincipal{ 
     width: 50px;
-    height: 60px;   
+    height: 50px;    
     filter: drop-shadow(1px 1px 0 black);
-    float: left;
+    align-self: center;
 }
 
 .TituloLogo{
-    height: 60px;
-    display: inline-flex;
     align-items:flex-end;
 }
 
@@ -40,30 +43,22 @@ header{
     color: rgb(245, 209, 6);
     text-shadow: 1px 1px 2px black, 0 0 1px black, 0 0 1px black;
     margin-left: 10px;
-    font-family: 'Dancing Script', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
+    }
 
 .TituloLogo h1{
     font-size: 32px;
-    height: 42px;
+    font-family: 'Dancing Script', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .TituloLogo h4{
-    margin-left: 5px;
     font-size: 18px;
-    height: 30px;
-}
-
-
-
-header .ContenedorPpal{
-    display: table;
+    padding-bottom: 2px;
 }
 
 .Cabecera{
-    height: 80px;
+    display: flex;    
     border-bottom: 1px solid goldenrod;
-    align-items: center;
+    align-items: center; 
 }
 
 /* -----------------------------Header----------------------------- */
@@ -76,11 +71,9 @@ header .ContenedorPpal{
 
 header label{
     color: black;
-    font-size: 25px;
+    font-size: 24px;
     cursor: pointer;
-    margin-left: 2px;
-    padding-top: 100px;
-    
+    margin-left: 2px;    
 }
 
 .MenuPpal{
@@ -110,12 +103,9 @@ li{
 .li_menu:hover{
     background: rgba(218, 165, 32, 0.576);
     font-weight: bold;
-    /* font-size: 20px; */
 }
 
 .li_menu a:hover{   
-    /* padding: 18px 0; */
-    /* padding-left: 7px; */
     font-style: italic;   
 }
 
@@ -138,7 +128,7 @@ li{
 .Contenedores
 {
     width: 100%;
-    margin-top: 113px;
+    margin-top: 102px;
     position: relative;
     flex-direction: column;    
     margin-bottom: 100px;
@@ -165,11 +155,11 @@ li{
 .Contenedores h2{
     position: relative;
     text-align: center;
+    font-size: 32px;
     padding: 10px 0;
     text-shadow: 2px 2px 2px gray;
-    /* animation-name: mover;
-    animation-duration: 2s; */
     animation: cambiarColor 2s linear;
+    font-family: 'Dancing Script', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* -----------------------------Footer----------------------------- */
@@ -205,7 +195,6 @@ footer .ContenedorPpal{
 
 .FooterIzquierda span{
     justify-content: left;
-    /* font-size: 15px; */
     font-style: italic;
 }
 
@@ -217,39 +206,31 @@ footer .ContenedorPpal{
 @media screen and (max-width: 480px)    /*----------320------------*/
 { 
     header{
-        height: 85px;
+        height: 80px;
     } 
-    
-    .Cabecera{
-        height: 50px;
-    }
 
     .Contenedores
     {
-    margin-top: 85px;
+    margin-top: 80px;
     margin-bottom: 50px;
      
 }
     
     #LogoPrincipal
     {
-        width: 35px;
-        height: 30px;
+        width: 31.25px;
+        height: 31.25px;
     }
 
-    .TituloLogo{
-        height: 40px;
-    }
     .TituloLogo h1{
         font-size: 20px;
-        height: 30px;
     }
     
     .TituloLogo h4{
-        margin-left: 2px;
-        font-size: 11px;
-        height: 23px;
-    }
+        
+        font-size: 11.25px;
+        padding-bottom: 2px;
+    } 
 
     footer{
         font-size: 12px;
@@ -261,71 +242,54 @@ footer .ContenedorPpal{
 
 @media screen and (min-width: 768px)    /*----------768------------*/
 { 
-
-    .TituloLogo{
-        height: 70px;
-    }
-    .TituloLogo h1{
-        font-size: 40px;
+    #LogoPrincipal
+    {
+        width: 60px;
         height: 60px;
-    }
-    
-    .TituloLogo h4{
-        margin-left: 5px;
-        font-size: 25px;
-        height: 46px;
     }
 }                                       /*----------768------------*/
 
 
 @media screen and (min-width: 1024px)   /*----------1024------------*/
 {
-    .Cabecera
-    {
-        display: block;
-        /* width: 100%;
-        margin: auto;
-        position: relative; */
-    }
+    
 
     .Contenedores
     {
-            margin: 140px 0 0 0;
-            padding-bottom: 60px;
+        margin: 124px 0 0 0;
+        padding-bottom: 60px;
     }
 
     #LogoPrincipal
     {
-        width: 70px;
-        height: 65px;
+        width: 72px;
+        height: 72px;
     }
 
     .TituloLogo{
-        height: 90px;
-        margin: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
     }
 
     .TituloLogo h1{
-        font-size: 60px;
-        height: 90px;
+        font-size: 48px;
     }
     
     .TituloLogo h4{
-        margin-left: 5px;
-        font-size: 30px;
-        height: 62px;
+        font-size: 24px;
     }
     
     header{
-        height: 140px;
+        height: 124px;
     }
 
     .menu{
         position:relative;
         left: 0;
         display: flex;
-        width: auto;
-        height: auto;
+        width: 98%;
+        height: 50px;
         transform: none;
         justify-content: center;
     }
@@ -337,9 +301,10 @@ footer .ContenedorPpal{
     .MenuPpal{
         position: relative;
         transition: none;
-        width: 75%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
         height: 50px;
-        padding: 5px;        
     }
 
     #checkmenu:checked ~ .MenuPpal{
@@ -357,43 +322,44 @@ footer .ContenedorPpal{
     }
 
     .ul_menu{
-        width: 100%;
-        text-align: center;
-        display: inline-flex;
+        display: flex;
+        height: 100%;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
     
     .li_menu{
-        width: 200px;
-        height: 40px;
-        font-size: 16px;
-        margin: 1px 10px;
+        width: 160px; 
+        margin: 1px 1px;
         list-style: none;
-        background-color: rgb(143, 104, 6);
-        box-shadow: 4px 4px 4px gray;
-        border-top-left-radius: 10%; 
-        border-top-right-radius: 10%; 
+        border:none;
         cursor: pointer;
+        
+    }
+
+    .li_menu a{
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 0px 0px 5px goldenrod;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid goldenrod;
+        border-radius: 5px;
+        padding: 8px 0px ;
+        background-color: rgb(148, 112, 23);
+        box-shadow: 0 3px 5px gray;
     }
     
-    .li_menu:hover{
-        background-color: rgb(80, 59, 5);
+    .li_menu:hover{        
         font-weight: normal;
         font-size: 16px;
     }
-    
-    .li_menu a{
-        height: 40px;
-        padding: 10px;
-        text-decoration: none;
-        color: antiquewhite;
-    }
 
-    .li_menu a:hover{   
-        padding: 10px;
+    .li_menu a:hover{  
         font-style: normal;
-        font-weight: bold;  
+        font-weight: bold;
+        background-color: black;
     }
 
     h2{
