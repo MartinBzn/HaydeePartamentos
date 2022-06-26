@@ -1,7 +1,7 @@
 document.getElementById ("headercabecera").innerHTML= `
 <div class="ContenedorPpal">
             <div class="Cabecera">
-                <img id="LogoPrincipal" src="/img/logo_ppal.png" alt="Logo">
+                <img id="LogoPrincipal" src="img/logo_ppal.png" alt="Logo">
                 <div class="TituloLogo">
                     <h1>Haydee Partamentos.</h1>
                     <h4>Negocios Inmobiliarios</h4>
